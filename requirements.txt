@@ -1,0 +1,14 @@
+joblib==1.1.0
+keras==2.9.0
+matplotlib==3.3.4
+networkx==2.6.3
+nltk==3.7
+numpy==1.23.2
+pandas==1.1.5
+scikit_learn==1.1.2
+scipy==1.9.0
+setuptools==45.2.0
+tabulate==0.8.9
+tensorflow==2.9.1
+typer[all]
+rich==12.5.1
