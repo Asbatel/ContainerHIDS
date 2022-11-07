@@ -3,8 +3,17 @@
 | CHIDS is an unsupervised anomaly-based host intrusion detection system for containers. CHIDS relies on monitoring heterogeneous properties of system calls (syscalls). The development of CHIDS is based on the premise that malicious activities can be accurately uncovered when various syscall properties (e.g., frequency, arguments) are inspected jointly within their context. In detail, CHIDS learns container "normal" behavior and flags deviations in production. | ![ContainerHIDS](https://i0.wp.com/foxutech.com/wp-content/uploads/2017/03/Docker-Security.png?fit=820%2C407&ssl=1 "ContainerHIDS") |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------:|
 
+## Research paper
+
+We present our approach and the findings of this work in the following research paper:
+
+**Contextualizing System Calls in Containers for Anomaly-Based Intrusion Detection** 
+[[PDF]](https://conand.me/publications/elkhairi-ccsw-2022.pdf)  
+Asbat El Khairi, Marco Caselli, Christian Knierim, Andreas Peter, Andrea Continella.  
+*Proceedings of the ACM Cloud Computing Security Workshop (CCSW), 2022*
+
 ## CHIDS Architecture
-![Architecture](https://github.com/Asbatel/testhere/blob/master/figures/architecture.png "ContainerHIDS")
+<img src="figures/architecture.png" width="100%">
 
 - **Syscalls Chunking.**
 We divide the ongoing flow of system calls into short captures *scaps*, defined as *syscall sequences*. 
@@ -30,8 +39,7 @@ $> python3 main.py baseline  --td training_dir --od output_dir
 ```
 ### Example: Brute-Force Login (CWE-307) Training Summary
 
-![(Brute-Force Login Example)](https://github.com/Asbatel/testhere/blob/master/figures/screenshots/training_results.png "ContainerHIDS")
-
+<img src="figures/screenshots/training_results.png" width="100%">
 
 ## Get Evaluation Results 
 
@@ -47,4 +55,4 @@ $> python3 main.py evaluate --ss output_dir/seen_syscalls.pkl --sa output_dir/se
 
 ### Example: Brute-Force Login (CWE-307) Evaluation Summary
 
-![(Brute-Force Login Example)](https://github.com/Asbatel/testhere/blob/master/figures/screenshots/evaluation_results.png)
+<img src="figures/screenshots/evaluation_results.png" width="40%">
